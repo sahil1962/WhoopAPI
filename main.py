@@ -56,6 +56,6 @@ def get_whoop_stat():
     except Exception as e:
         return {"error": str(e)}, 500
 
-# Run the server with Waitress
-if __name__ == "__main__":
-    serve(app.server, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+# Run the Dash app with Waitress if this script is run directly
+serve(app.server, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+
