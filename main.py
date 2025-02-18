@@ -58,4 +58,4 @@ def get_whoop_stat():
 
 # Run the server with Waitress
 if __name__ == "__main__":
-    serve(server, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+    serve(app.server, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
