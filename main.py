@@ -1,5 +1,5 @@
 import os
-from dash import Dash
+import dash
 from whoop import WhoopClient
 from dotenv import load_dotenv
 from waitress import serve
@@ -13,7 +13,8 @@ USERNAME = os.getenv("WHOOP_USERNAME")
 PASSWORD = os.getenv("WHOOP_PASSWORD")
 
 # Initialize Dash app
-app = Dash(__name__)
+app = dash.Dash(__name__)
+# Expose the server
 server = app.server
 
 # Metric mapping
